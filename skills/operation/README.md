@@ -11,24 +11,44 @@ Operation 团队负责社区运营，包括：
 - 数据分析和运营优化
 - 社区成员关系维护
 
-## 目录结构建议
+## 目录结构
 
 ```
 operation/
 ├── README.md           # 本文件
 ├── content/           # 内容创作相关
-├── events/            # 活动策划相关
-├── analytics/         # 数据分析相关
-└── automation/        # 运营自动化工具
+│   └── release-poster/  # 发布海报生成器
+├── events/            # 活动策划相关（待创建）
+├── analytics/         # 数据分析相关（待创建）
+└── automation/        # 运营自动化工具（待创建）
 ```
 
 ## Skills 列表
 
-当前目录下的 skills：
+### 内容创作相关
 
-<!-- 在此列出你的 skills，保持更新 -->
+#### [Release Poster Generator](content/release-poster/release-poster.md)
+生成专业的技术风格版本发布宣传海报。
 
-- 暂无
+**功能特性**：
+- 自动生成版本发布公告海报
+- 支持中英文内容
+- 现代化设计风格（渐变背景、圆角卡片、图标分类）
+- 可自定义颜色、尺寸和装饰元素
+- 适用于社交媒体、GitHub Release、社区公告等场景
+
+**适用场景**：
+- 开源项目版本发布
+- 功能更新公告
+- 里程碑宣传
+- 社区活动预告
+
+**使用方式**：
+```
+/release-poster
+```
+
+详细文档：[content/release-poster/release-poster.md](content/release-poster/release-poster.md)
 
 ## 团队规范
 
