@@ -11,22 +11,22 @@ Agent-Skills/
 ├── .gitignore                   # Git 忽略文件配置
 │
 ├── skills/                      # Skills 主目录
-│   ├── team-a/                  # Team A 专属 skills
-│   │   ├── README.md           # Team A 说明文档
+│   ├── infrastructure/                  # Infrastructure Team 专属 skills
+│   │   ├── README.md           # Infrastructure Team 说明文档
 │   │   ├── code-review/        # 代码审查相关（建议创建）
 │   │   ├── testing/            # 测试相关（建议创建）
 │   │   ├── deployment/         # 部署相关（建议创建）
 │   │   └── documentation/      # 文档相关（建议创建）
 │   │
-│   ├── team-b/                  # Team B 专属 skills
-│   │   ├── README.md           # Team B 说明文档
+│   ├── upstream/                  # Upstream Team 专属 skills
+│   │   ├── README.md           # Upstream Team 说明文档
 │   │   ├── code-review/        # 代码审查相关（建议创建）
 │   │   ├── testing/            # 测试相关（建议创建）
 │   │   ├── deployment/         # 部署相关（建议创建）
 │   │   └── documentation/      # 文档相关（建议创建）
 │   │
-│   ├── team-c/                  # Team C 专属 skills
-│   │   ├── README.md           # Team C 说明文档
+│   ├── operation/                  # Operation Team 专属 skills
+│   │   ├── README.md           # Operation Team 说明文档
 │   │   ├── code-review/        # 代码审查相关（建议创建）
 │   │   ├── testing/            # 测试相关（建议创建）
 │   │   ├── deployment/         # 部署相关（建议创建）
@@ -58,7 +58,7 @@ Agent-Skills/
 
 存放所有 skills 的主目录，按团队和用途组织。
 
-#### 团队目录（team-a, team-b, team-c）
+#### 团队目录（infrastructure, upstream, operation）
 
 每个团队有独立的目录，用于存放该团队专属的 skills。
 
@@ -164,10 +164,10 @@ Agent-Skills/
 
 ```bash
 # 在团队目录下创建新分类
-mkdir skills/team-a/new-category
+mkdir skills/infrastructure/new-category
 
 # 添加说明文档
-cat > skills/team-a/new-category/README.md << EOF
+cat > skills/infrastructure/new-category/README.md << EOF
 # New Category Skills
 
 说明这个分类的用途
@@ -188,8 +188,8 @@ skills/
 
 ```
 tests/
-├── team-a/
-├── team-b/
+├── infrastructure/
+├── upstream/
 └── shared/
 ```
 

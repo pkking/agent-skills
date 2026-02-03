@@ -15,12 +15,12 @@ Agent-Skills/
 │       └── validate-skills.yml      # Skills 验证工作流
 │
 ├── skills/                           # Skills 主目录
-│   ├── team-a/
-│   │   └── README.md                # Team A 说明
-│   ├── team-b/
-│   │   └── README.md                # Team B 说明
-│   ├── team-c/
-│   │   └── README.md                # Team C 说明
+│   ├── infrastructure/
+│   │   └── README.md                # Infrastructure Team 说明
+│   ├── upstream/
+│   │   └── README.md                # Upstream Team 说明
+│   ├── operation/
+│   │   └── README.md                # Operation Team 说明
 │   └── shared/
 │       ├── README.md                # 共享 skills 说明
 │       └── example-skill.md         # 示例：Git 提交助手
@@ -38,9 +38,9 @@ Agent-Skills/
 ## 核心特性
 
 ### ✅ 三团队分离架构
-- `skills/team-a/` - Team A 专属目录
-- `skills/team-b/` - Team B 专属目录
-- `skills/team-c/` - Team C 专属目录
+- `skills/infrastructure/` - Infrastructure Team 专属目录
+- `skills/upstream/` - Upstream Team 专属目录
+- `skills/operation/` - Operation Team 专属目录
 - `skills/shared/` - 跨团队共享目录
 
 ### ✅ 完整文档体系
@@ -72,8 +72,8 @@ Agent-Skills/
 #### 直接提交（小改动）
 ```bash
 git clone <repo-url>
-cp my-skill.md skills/team-a/
-git add skills/team-a/my-skill.md
+cp my-skill.md skills/infrastructure/
+git add skills/infrastructure/my-skill.md
 git commit -m "Add skill: my-skill"
 git push origin main
 ```
@@ -81,8 +81,8 @@ git push origin main
 #### PR 流程（推荐）
 ```bash
 git checkout -b feature/add-skill
-cp my-skill.md skills/team-a/
-git add skills/team-a/my-skill.md
+cp my-skill.md skills/infrastructure/
+git add skills/infrastructure/my-skill.md
 git commit -m "Add skill: my-skill"
 git push origin feature/add-skill
 # 在 GitHub 创建 PR
@@ -100,7 +100,7 @@ cat > ~/.claude/config.json << 'EOF'
 {
   "skills": {
     "directories": [
-      "~/agent-skills/skills/team-a",
+      "~/agent-skills/skills/infrastructure",
       "~/agent-skills/skills/shared"
     ]
   }
@@ -118,7 +118,7 @@ EOF
     "repositories": [
       {
         "url": "https://github.com/<org>/Agent-Skills.git",
-        "path": "skills/team-a"
+        "path": "skills/infrastructure"
       }
     ]
   }

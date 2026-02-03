@@ -7,9 +7,9 @@
 ```
 Agent-Skills/
 ├── skills/
-│   ├── team-a/          # A团队专属skills
-│   ├── team-b/          # B团队专属skills
-│   ├── team-c/          # C团队专属skills
+│   ├── infrastructure/  # Infrastructure 团队（技术设施建设）专属skills
+│   ├── upstream/        # Upstream 团队（上游开发贡献）专属skills
+│   ├── operation/       # Operation 团队（社区运营）专属skills
 │   └── shared/          # 跨团队共享的skills
 ├── templates/           # Skill模板
 └── docs/               # 文档和使用指南
@@ -28,10 +28,10 @@ cd Agent-Skills
 
 # 将你的skill文件放入对应的团队目录
 # 例如：将 my-skill.md 放入 team-a 目录
-cp /path/to/your/skill.md skills/team-a/
+cp /path/to/your/skill.md skills/infrastructure/
 
 # 提交更改
-git add skills/team-a/my-skill.md
+git add skills/infrastructure/my-skill.md
 git commit -m "Add my-skill for team-a"
 git push origin main
 ```
@@ -43,10 +43,10 @@ git push origin main
 git checkout -b feature/add-new-skill
 
 # 添加skill文件到对应目录
-cp /path/to/your/skill.md skills/team-a/
+cp /path/to/your/skill.md skills/infrastructure/
 
 # 提交并推送
-git add skills/team-a/
+git add skills/infrastructure/
 git commit -m "Add new skill: skill-name"
 git push origin feature/add-new-skill
 
@@ -154,19 +154,40 @@ YYYY-MM-DD
 
 ### 目录选择指南
 
-- **team-a/team-b/team-c/**: 放置团队特定的、不需要跨团队共享的 skills
+- **infrastructure/**: Infrastructure 团队（技术设施建设）的专属 skills
+- **upstream/**: Upstream 团队（上游开发贡献）的专属 skills
+- **operation/**: Operation 团队（社区运营）的专属 skills
 - **shared/**: 放置所有团队都可能用到的通用 skills
 
 ## 🔍 Skills 分类建议
 
 为了更好地组织，建议在各团队目录下按功能分类：
 
+**Infrastructure 团队示例**：
 ```
-skills/team-a/
-├── code-review/        # 代码审查相关
-├── testing/           # 测试相关
+skills/infrastructure/
+├── devops/            # DevOps 相关
+├── monitoring/        # 监控和告警
 ├── deployment/        # 部署相关
-└── documentation/     # 文档相关
+└── automation/        # 自动化工具
+```
+
+**Upstream 团队示例**：
+```
+skills/upstream/
+├── contribution/      # 贡献相关
+├── code-review/       # 代码审查相关
+├── testing/          # 测试相关
+└── documentation/    # 文档相关
+```
+
+**Operation 团队示例**：
+```
+skills/operation/
+├── content/           # 内容创作相关
+├── events/            # 活动策划相关
+├── analytics/         # 数据分析相关
+└── automation/        # 运营自动化工具
 ```
 
 ## 🤝 贡献指南

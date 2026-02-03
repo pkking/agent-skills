@@ -8,14 +8,17 @@
 
 #### 步骤 1：选择合适的目录
 
-- **团队专属 skill**: 放在 `skills/team-{a,b,c}/` 目录
+- **团队专属 skill**: 放在对应团队目录
+  - Infrastructure 团队: `skills/infrastructure/`
+  - Upstream 团队: `skills/upstream/`
+  - Operation 团队: `skills/operation/`
 - **跨团队共享 skill**: 放在 `skills/shared/` 目录
 
 #### 步骤 2：使用模板创建 Skill
 
 ```bash
 # 复制模板
-cp templates/skill-template.md skills/team-a/your-skill-name.md
+cp templates/skill-template.md skills/infrastructure/your-skill-name.md
 
 # 编辑文件
 # 填写所有必需的章节
@@ -50,7 +53,7 @@ cp templates/skill-template.md skills/team-a/your-skill-name.md
 git checkout -b feature/add-skill-name
 
 # 添加文件
-git add skills/team-a/your-skill-name.md
+git add skills/infrastructure/your-skill-name.md
 
 # 提交
 git commit -m "Add skill: your-skill-name"

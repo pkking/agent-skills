@@ -13,7 +13,7 @@ cat > ~/.claude/config.json << 'EOF'
 {
   "skills": {
     "directories": [
-      "~/agent-skills/skills/team-a",
+      "~/agent-skills/skills/infrastructure",
       "~/agent-skills/skills/shared"
     ]
   }
@@ -25,13 +25,13 @@ EOF
 
 ```bash
 # 复制模板
-cp templates/skill-template.md skills/team-a/my-new-skill.md
+cp templates/skill-template.md skills/infrastructure/my-new-skill.md
 
 # 编辑文件
-# vim/code/nano skills/team-a/my-new-skill.md
+# vim/code/nano skills/infrastructure/my-new-skill.md
 
 # 提交
-git add skills/team-a/my-new-skill.md
+git add skills/infrastructure/my-new-skill.md
 git commit -m "Add skill: my-new-skill"
 git push origin main
 ```
@@ -53,11 +53,11 @@ git pull origin main
 git checkout -b feature/my-skill
 
 # 添加 skill
-cp templates/skill-template.md skills/team-a/my-skill.md
+cp templates/skill-template.md skills/infrastructure/my-skill.md
 # 编辑文件...
 
 # 提交
-git add skills/team-a/my-skill.md
+git add skills/infrastructure/my-skill.md
 git commit -m "Add skill: my-skill"
 git push origin feature/my-skill
 
@@ -68,9 +68,9 @@ git push origin feature/my-skill
 
 | 路径 | 用途 |
 |------|------|
-| `skills/team-a/` | Team A 的 skills |
-| `skills/team-b/` | Team B 的 skills |
-| `skills/team-c/` | Team C 的 skills |
+| `skills/infrastructure/` | Infrastructure Team 的 skills |
+| `skills/upstream/` | Upstream Team 的 skills |
+| `skills/operation/` | Operation Team 的 skills |
 | `skills/shared/` | 共享 skills |
 | `templates/skill-template.md` | Skill 模板 |
 | `docs/getting-started.md` | 入门指南 |
@@ -135,7 +135,7 @@ YYYY-MM-DD
 {
   "skills": {
     "directories": [
-      "~/agent-skills/skills/team-a",
+      "~/agent-skills/skills/infrastructure",
       "~/agent-skills/skills/shared"
     ]
   }
@@ -150,7 +150,7 @@ YYYY-MM-DD
     "repositories": [
       {
         "url": "https://github.com/<org>/Agent-Skills.git",
-        "path": "skills/team-a"
+        "path": "skills/infrastructure"
       }
     ]
   }

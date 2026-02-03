@@ -19,7 +19,7 @@ cd ~/agent-skills
 {
   "skills": {
     "directories": [
-      "~/agent-skills/skills/team-a",
+      "~/agent-skills/skills/infrastructure",
       "~/agent-skills/skills/shared"
     ]
   }
@@ -34,7 +34,7 @@ cd ~/agent-skills
 {
   "skills": {
     "directories": [
-      "~/agent-skills/skills/team-b",
+      "~/agent-skills/skills/upstream",
       "~/agent-skills/skills/shared"
     ]
   }
@@ -49,7 +49,7 @@ cd ~/agent-skills
     "repositories": [
       {
         "url": "https://github.com/<org>/Agent-Skills.git",
-        "path": "skills/team-a"
+        "path": "skills/infrastructure"
       }
     ]
   }
@@ -84,7 +84,7 @@ cd ~/agent-skills
 
 1. 复制模板文件：
    ```bash
-   cp templates/skill-template.md skills/team-a/my-first-skill.md
+   cp templates/skill-template.md skills/infrastructure/my-first-skill.md
    ```
 
 2. 编辑文件，填写你的 skill 内容
@@ -97,7 +97,7 @@ cd ~/agent-skills
 
 4. 提交到仓库：
    ```bash
-   git add skills/team-a/my-first-skill.md
+   git add skills/infrastructure/my-first-skill.md
    git commit -m "Add my first skill"
    git push origin main
    ```
