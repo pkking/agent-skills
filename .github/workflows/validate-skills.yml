@@ -32,7 +32,7 @@ jobs:
             if [[ "$filename" =~ [A-Z] ]] || [[ "$filename" =~ [[:space:]] ]] || [[ "$filename" =~ _ ]]; then
               invalid_files+=("$file")
             fi
-          done < <(find skills -name "*.md" -not -name "README.md")
+          done < <(find skills -name "*.md" -not -name "README.md" -not -name "SKILL.md")
 
           if [ ${#invalid_files[@]} -gt 0 ]; then
             echo "❌ The following files don't follow naming convention (lowercase with hyphens):"
